@@ -12,7 +12,7 @@ NON_WIKI_REPOS = [
 ]
 
 
-def get_wiki_repos() -> list[dict[str, str]]:
+def get_wiki_repos() -> None:
     """Get the list of wiki repos from the GitHub API."""
     all_repos = requests.get(GET_REPOS_URL, timeout=500).json()
     wiki_repos = [
